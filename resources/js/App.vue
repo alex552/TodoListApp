@@ -1,7 +1,7 @@
 <template>
     <main class="app">
         <section class="greeting">
-            <h3 class="title">ToDoList Application Demo</h3>
+            <h3 class="title">To-Do List Application Demo</h3>
         </section>
 
         <div class="input-section">
