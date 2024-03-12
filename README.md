@@ -5,10 +5,11 @@
 
 ### Installation
 
-After cloning the repository to your local machine, run the following commands to install the dependencies and set up the environment:
+#### After cloning the repository to your local machine, run the following commands to install the dependencies and set up the environment:
 ```sh
 composer install 
 ```
+
 ```sh
 php -r "file_exists('.env') || copy('.env.example', '.env');"
 ```
@@ -19,16 +20,30 @@ php artisan key:generate
 ```sh
 php artisan migrate
 ```
-### Running the application
+### For the Frontend
+
+```sh
+npm install
+```
+```sh
+npm run build
+```
+
+### To run the application
 ```sh
 php artisan serve
 ```
+### To consume the API, I'm using Vue3 and Axios. The frontend is available at `http://localhost:8000`
+
 ### Testing
 To run the tests, run the following command:
 ```sh
 php artisan test
 ```
+
 ___
+
+
 
 ## Todo API Endpoints
 
@@ -50,13 +65,6 @@ Below is a list of API endpoints and their expected input and output:
 
 ### GET /todos/{id}
 - Retrieves the Todo item with the specified ID.
-- Returns a JSON object with the following fields:
-  - `id`: The unique identifier of the Todo item.
-  - `title`: The title of the Todo item.
-  - `completed`: A boolean indicating whether the Todo item is completed.
-  - `created_at`: The date and time when the Todo item was created.
-  - `updated_at`: The date and time when the Todo item was last updated
-
 
 ### PUT /todos/{id}
 - Updates the Todo item with the specified ID.
@@ -68,17 +76,15 @@ Below is a list of API endpoints and their expected input and output:
 - Deletes the Todo item with the specified ID.
 - Returns a 204 success response.
 
-# Additional features to be added
-- Dockerization
+# Additional features to improve the application:
+- Dockerization of the application for easy deployment
 - Authentication
-- Search
-- Sorting
-- Filtering
-- Pagination
-- Deployment
-- Rate limiting
-- Caching
-- Logging
+- Search functionality
+- Sorting, Filtering and Pagination
+- Rate limiting and API Throttling
+- Caching to improve performance
+- Logging and Monitoring
+
 
 # License
 This project is licensed under the MIT License 
