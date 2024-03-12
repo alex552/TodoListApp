@@ -9,13 +9,13 @@ After cloning the repository to your local machine, run the following commands t
 ```sh
 composer install 
 ```
-
 ```sh
 php -r "file_exists('.env') || copy('.env.example', '.env');"
 ```
 ```sh
 php artisan key:generate
 ```
+###### I'm using sqlite as the database for this project. To create the database file, run the following command:
 ```sh
 php artisan migrate
 ```
@@ -67,6 +67,18 @@ Below is a list of API endpoints and their expected input and output:
 ### DELETE /todos/{id}
 - Deletes the Todo item with the specified ID.
 - Returns a 204 success response.
+
+# Additional features to be added
+- Dockerization
+- Authentication
+- Search
+- Sorting
+- Filtering
+- Pagination
+- Deployment
+- Rate limiting
+- Caching
+- Logging
 
 # License
 This project is licensed under the MIT License 
